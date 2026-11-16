@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CoCoMangas">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>CoCoMangas — Меню</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="logo">CM</div>
+          <div class="brand-text">
+            <h1>CoCoMangas</h1>
+            <p>ЦЕНТР ПАРОВЫХ КОКТЕЙЛЕЙ</p>
+          </div>
+        </div>
+        <div class="header-meta">
+          <div class="meta-row">
+            <span class="meta-icon">📍</span>
+            <span>пр. Мира, 93В · 2 этаж</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-icon">🕐</span>
+            <span>ежедневно 10:00 – 02:00</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Categories -->
+    <nav class="cats" id="cats"></nav>
+
+    <!-- Content -->
+    <main class="content" id="content"></main>
+
+    <!-- Bottom bar -->
+    <div class="bottom-bar">
+      <button class="btn-order" id="btnOrder">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h15l-1.5 9h-12z"/>
+          <circle cx="9" cy="20" r="1"/>
+          <circle cx="18" cy="20" r="1"/>
+          <path d="M6 6L5 3H2"/>
+        </svg>
+        <span>Заказ</span>
+        <span class="order-badge" id="orderBadge">0</span>
+      </button>
+    </div>
+
+    <!-- Cart sheet -->
+    <div class="backdrop" id="backdrop"></div>
+    <div class="sheet" id="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <h2>Ваш заказ</h2>
+        <button class="sheet-x" id="sheetClose">✕</button>
+      </div>
+      <div class="sheet-body" id="sheetBody">
+        <div class="empty" id="empty">
+          <p>Заказ пуст</p>
+          <span>Нажмите «В заказ» у понравившихся позиций</span>
+        </div>
+      </div>
+      <div class="sheet-foot" id="sheetFoot" hidden>
+        <div class="total-line">
+          <span>Итого</span>
+          <strong id="totalPrice">0 ₽</strong>
+        </div>
+        <p class="waiter-hint">Позовите официанта — он посмотрит ваш заказ</p>
+        <button class="btn-clear" id="btnClear">Очистить заказ</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
